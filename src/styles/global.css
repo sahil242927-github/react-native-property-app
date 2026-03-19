@@ -1,0 +1,39 @@
+/* src/global.css */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+
+/* Bridge for Native-specific features */
+@import "nativewind/theme";
+
+@theme {
+  /* Primary Scale */
+  --color-primary-200: #0061ff1a;
+  --color-primary-300: #0061ff;
+
+  /* Accent Scale */
+  --color-accent-100: #fbfbfd;
+
+  /* Black/Grey Scale */
+  --color-black: #000000;
+  --color-black-100: #8c8e98;
+  --color-black-200: #666876;
+  --color-black-300: #191d31;
+
+  /* Danger */
+  --color-danger: #f75555;
+
+  /* Rubik Font Family Mapping */
+  --font-rubik: Rubik-Regular;
+  --font-rubik-bold: Rubik-Bold;
+  --font-rubik-medium: Rubik-Medium;
+  --font-rubik-light: Rubik-Light;
+  --font-rubik-extrabold: Rubik-ExtraBold;
+  --font-rubik-semibold: Rubik-SemiBold;
+}
+
+@layer base {
+  text {
+    font-family: "Rubik-Regular", sans-serif;
+  }
+}
