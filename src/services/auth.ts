@@ -1,6 +1,7 @@
 import * as Linking from "expo-linking";
 import * as WebBrowser from "expo-web-browser";
 
+import { User } from "@supabase/supabase-js";
 import { makeRedirectUri } from "expo-auth-session";
 import supabase from "@/lib/db";
 
@@ -70,7 +71,7 @@ export const loginWithGoogle = async (): Promise<boolean> => {
 /**
  * Retrieves the currently authenticated user's profile and metadata.
  */
-export const getCurrentUser = async () => {
+export const getCurrentUser = async (): Promise<User | null> => {
   try {
     const {
       data: { session },

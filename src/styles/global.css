@@ -8,6 +8,7 @@
 
 @theme {
   /* Primary Scale */
+  --color-primary-100: #3381ff1a;
   --color-primary-200: #0061ff1a;
   --color-primary-300: #0061ff;
 

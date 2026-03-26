@@ -1,6 +1,8 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "target": "ES2023", // Compiles to modern JS
+    "lib": ["ES2023", "DOM"],
     "strict": true,
     "baseUrl": "./src",
     "paths": {

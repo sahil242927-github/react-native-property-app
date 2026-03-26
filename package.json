@@ -8,7 +8,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "2.2.0",
@@ -42,7 +43,8 @@
     "react-native-url-polyfill": "^3.0.0",
     "react-native-web": "~0.21.0",
     "react-native-worklets": "0.7.2",
-    "supabase-js": "^0.0.1-security"
+    "supabase-js": "^0.0.1-security",
+    "use-debounce": "^10.1.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",
