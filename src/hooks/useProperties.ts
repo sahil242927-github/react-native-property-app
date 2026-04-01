@@ -20,7 +20,7 @@ export const useProperties = (params: FetchPropertiesParams) => {
 };
 
 // Hook for a single property
-export const usePropertyDetails = (id: string) => {
+export const usePropertyDetails = (id: number) => {
   return useQuery({
     queryKey: ["property", id],
     queryFn: () => getPropertyById(id),

@@ -10,6 +10,7 @@ import {
 } from "react-native";
 
 import Filters from "@/components/Filters";
+import NoResults from "@/components/NoResults";
 import Search from "@/components/Search";
 import icons from "@/constants/icons";
 import { useUser } from "@/hooks/useUser";
@@ -53,9 +54,7 @@ export default function Index() {
           isLoading ? (
             <ActivityIndicator size="large" className="text-primary-300 mt-5" />
           ) : (
-            <Text className="text-center text-zinc-400 mt-5">
-              No properties found
-            </Text>
+            <NoResults />
           )
         }
         ListHeaderComponent={
@@ -106,6 +105,16 @@ export default function Index() {
               bounces={false}
               showsHorizontalScrollIndicator={false}
               contentContainerClassName="flex gap-5 mt-5"
+              ListEmptyComponent={
+                isFeaturedLoading ? (
+                  <ActivityIndicator
+                    size="large"
+                    className="text-primary-300 mt-5 flex-1 flex justify-center"
+                  />
+                ) : (
+                  <NoResults />
+                )
+              }
             />
 
             {/* Recommendations Header & Filter */}

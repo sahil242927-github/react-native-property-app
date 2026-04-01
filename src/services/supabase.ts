@@ -56,7 +56,7 @@ export const getProperties = async ({
   return data as Property[];
 };
 
-export const getPropertyById = async (id: string): Promise<Property> => {
+export const getPropertyById = async (id: number): Promise<Property> => {
   const { data, error } = await supabase
     .from("properties")
     .select("*, agents(*)") // Joins the agent data automatically
